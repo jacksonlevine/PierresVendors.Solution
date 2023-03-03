@@ -11,5 +11,9 @@ namespace PierresVendors.Models
     {
       return _allinstances;
     }
+    public static void ClearAll()
+    {
+      _allinstances.Clear();
+    }
   }
 }
