@@ -27,7 +27,8 @@ body {
   display:flex;
   flex-direction: column;
   word-wrap:break-word;
-  background-color: blue;
+  background-color: lightblue;
   padding:20px;
+  margin:20px;
   max-width: fit-content;
 }

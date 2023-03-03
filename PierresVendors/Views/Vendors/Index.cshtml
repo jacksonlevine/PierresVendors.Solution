@@ -6,9 +6,8 @@
 @foreach (Vendor v in Model)
 {
   <div class="vendor">
-    <h2>Name: @v.Name</h2>
+    <a href="/vendors/@v.Id"><h2>Vendor: @v.Name</h2></a>
     <p>Description: @v.Description</p>
-    <a href="/vendors/@v.Id">View more info on this vendor</a>
   </div>
 }
 <a href="/vendors/new">Click here to create a new Vendor entry</a>
