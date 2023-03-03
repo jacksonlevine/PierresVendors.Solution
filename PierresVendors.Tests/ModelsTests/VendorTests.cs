@@ -12,5 +12,12 @@ namespace PierresVendors.Tests
       Vendor v = new Vendor();
       Assert.AreEqual(typeof(Vendor), v.GetType());
     }
+    [TestMethod]
+    public void Vendor_HasPublicNameProperty_String()
+    {
+      Vendor v = new Vendor();
+      v.Name = "Test";
+      Assert.AreEqual("Test", v.Name);
+    }
   }
 }
