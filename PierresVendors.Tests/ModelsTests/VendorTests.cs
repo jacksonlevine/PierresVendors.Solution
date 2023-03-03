@@ -84,8 +84,8 @@ namespace PierresVendors.Tests
       o.Price = 500.00;
       v.Orders.Add(o);
       Order o2 = new Order();
-      o.Title = "300 Bagels";
-      o.Price = 500.00;
+      o2.Title = "300 Bagels";
+      o2.Price = 500.00;
       v.Orders.Add(o2);
       Assert.AreEqual(1000.00, v.TotalSpent());
     }

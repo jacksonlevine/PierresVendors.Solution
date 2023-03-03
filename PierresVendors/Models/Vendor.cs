@@ -36,5 +36,15 @@ namespace PierresVendors.Models
       }
       return null;
     }
+
+    public double TotalSpent()
+    {
+      double price = 0;
+      foreach(Order o in Orders)
+      {
+        price += o.Price;
+      }
+      return price;
+    }
   }
 }

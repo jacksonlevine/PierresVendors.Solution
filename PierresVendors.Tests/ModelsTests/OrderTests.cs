@@ -35,10 +35,11 @@ namespace PierresVendors.Tests
       Assert.AreEqual(25.00, o.Price);
     }
     [TestMethod]
-    public void Order_HasPublicDateProperty_DateTime()
+    public void Order_HasPublicDateProperty_String()
     {
       Order o = new Order();
-      Assert.AreEqual(typeof(string), o.Date.GetType());
+      o.Date = "Test";
+      Assert.AreEqual("Test", o.Date);
     }
   }
 }
