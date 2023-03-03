@@ -1,8 +1,6 @@
 using PierresVendors.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System;
-
 namespace PierresVendors.Controllers
 {
   public class VendorsController : Controller

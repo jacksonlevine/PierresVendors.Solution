@@ -1,6 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-
 namespace PierresVendors.Controllers
 {
   public class HomeController : Controller
