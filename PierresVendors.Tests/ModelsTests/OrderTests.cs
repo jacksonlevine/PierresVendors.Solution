@@ -38,7 +38,7 @@ namespace PierresVendors.Tests
     public void Order_HasPublicDateProperty_DateTime()
     {
       Order o = new Order();
-      Assert.AreEqual(typeof(DateTime), o.Date);
+      Assert.AreEqual(typeof(DateTime), o.Date.GetType());
     }
   }
 }
