@@ -49,5 +49,13 @@ namespace PierresVendors.Tests
       Vendor.ClearAll();
       Assert.AreEqual(0, Vendor.GetAll().Count);
     }
+    [TestMethod]
+    public void Vendor_AddsItselfToStaticInstancesListWhenCreated_Void()
+    {
+      Vendor v = new Vendor();
+      Vendor v2 = new Vendor();
+      Vendor v3 = new Vendor();
+      Assert.AreEqual(3, Vendor.GetAll().Count);
+    }
   }
 }
