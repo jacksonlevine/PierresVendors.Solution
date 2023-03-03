@@ -58,7 +58,7 @@ namespace PierresVendors.Tests
       Assert.AreEqual(3, Vendor.GetAll().Count);
     }
     [TestMethod]
-    public void Vendor_EachOneHasUniqueId()
+    public void Vendor_EachOneHasUniqueId_Int()
     {
       Vendor v = new Vendor();
       Vendor v2 = new Vendor();
@@ -67,6 +67,13 @@ namespace PierresVendors.Tests
       Assert.AreNotEqual(v2.Id, v3.Id);
       Assert.AreNotEqual(v3.Id, v.Id);
       Assert.AreNotEqual(v.Id, v3.Id);
+    }
+    [TestMethod]
+    public void Find_ReturnsVendorWithIdSpecifiedInArgument_Vendor()
+    {
+      Vendor v = new Vendor();
+      v.Name = "Josh";
+      Assert.AreEqual("Josh", Vendor.Find(0).Name)
     }
   }
 }
