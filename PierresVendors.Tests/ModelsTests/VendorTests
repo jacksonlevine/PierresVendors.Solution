@@ -5,7 +5,12 @@ namespace PierresVendors.Tests
   [TestClass]
   public class VendorTests
   {
-    
+    [TestMethod]
+    public void Vendor_CreatesInstanceOfVendor_Vendor()
+    {
+       Vendor v = new Vendor();
+       Assert.AreEqual(typeof(Vendor), v.GetType());
+    }
   }
 
 }
