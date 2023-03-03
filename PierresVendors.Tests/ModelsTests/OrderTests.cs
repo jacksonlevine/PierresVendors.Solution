@@ -29,7 +29,7 @@ namespace PierresVendors.Tests
     [TestMethod]
     public void Order_HasPublicPriceProperty_Double()
     {
-      Order.o = new Order();
+      Order o = new Order();
       o.Price = 25.00;
       Assert.AreEqual(25.00, o.Price);
     }
