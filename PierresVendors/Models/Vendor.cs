@@ -15,5 +15,9 @@ namespace PierresVendors.Models
     {
       _allinstances.Clear();
     }
+    public Vendor()
+    {
+      _allinstances.Add(this);
+    }
   }
 }
