@@ -73,7 +73,7 @@ namespace PierresVendors.Tests
     {
       Vendor v = new Vendor();
       v.Name = "Josh";
-      Assert.AreEqual("Josh", Vendor.Find(0).Name)
+      Assert.AreEqual("Josh", Vendor.Find(0).Name);
     }
   }
 }

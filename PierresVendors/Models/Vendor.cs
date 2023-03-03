@@ -16,6 +16,7 @@ namespace PierresVendors.Models
     public static void ClearAll()
     {
       _allinstances.Clear();
+      _currentId = 0;
     }
     public Vendor()
     {
@@ -26,6 +27,14 @@ namespace PierresVendors.Models
     {
       Id = _currentId;
       _currentId++;
+    }
+    public static Vendor Find(int id)
+    {
+      if(_allinstances.Exists(ven => ven.Id == id))
+      {
+        return _allinstances.Find(ven => ven.Id == id);
+      }
+      return null;
     }
   }
 }
