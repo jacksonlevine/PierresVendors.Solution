@@ -33,5 +33,11 @@ namespace PierresVendors.Tests
       Vendor v = new Vendor();
       Assert.AreEqual(typeof(List<Order>), v.Orders.GetType());
     }
+    [TestMethod]
+    public void GetAll_StaticMethodReturnsAllInstancesOfVendor_ListVendor()
+    {
+      Vendor v = new Vendor();
+      Assert.AreEqual(typeof(List<Vendor>), v.GetAll().GetType());
+    }
   }
 }
