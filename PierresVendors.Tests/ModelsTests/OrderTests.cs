@@ -12,5 +12,12 @@ namespace PierresVendors.Tests
       Order o = new Order();
       Assert.AreEqual(typeof(Order), o.GetType());
     }
+    [TestMethod]
+    public void Order_HasPublicTitleProperty()
+    {
+      Order o = new Order();
+      o.Title = "Test title";
+      Assert.AreEqual("Test title", o.Title);
+    }
   }
 }
