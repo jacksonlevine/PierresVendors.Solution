@@ -46,5 +46,9 @@ namespace PierresVendors.Models
       }
       return price;
     }
+    public double AverageSpent()
+    {
+      return TotalSpent()/Orders.Count;
+    }
   }
 }
