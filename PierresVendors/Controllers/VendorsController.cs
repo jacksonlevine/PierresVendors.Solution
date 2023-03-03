@@ -53,7 +53,7 @@ namespace PierresVendors.Controllers
       o.Price = double.Parse(price);
       o.Date = date;
       foundVendor.Orders.Add(o);
-      return RedirectToAction("ViewOrders",  $"vendors/{foundVendor.Id}", new{ id = foundVendor.Id });
+      return View("ViewOrders", foundVendor);
     }
   }
 }

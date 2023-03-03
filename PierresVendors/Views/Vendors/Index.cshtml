@@ -6,8 +6,8 @@
 @foreach (Vendor v in Model)
 {
   <div class="vendor">
-    <h2>@v.Name</h2>
-    <h2>@v.Description</h2>
+    <h2>Name: @v.Name</h2>
+    <p>Description: @v.Description</p>
     <a href="/vendors/@v.Id">View more info on this vendor</a>
   </div>
 }
