@@ -1,0 +1,12 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace PierresVendors.Tests
+{
+  [TestClass]
+  public class VendorTests
+  {
+    
+  }
+
+}
+
