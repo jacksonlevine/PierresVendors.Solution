@@ -92,7 +92,16 @@ namespace PierresVendors.Tests
     [TestMethod]
     public void AverageSpent_ReturnsAverageAmountSpentWithThisVendor_Double()
     {
-      
+            Vendor v = new Vendor();
+      Order o = new Order();
+      o.Title = "200 Bagels";
+      o.Price = 600.00;
+      v.Orders.Add(o);
+      Order o2 = new Order();
+      o2.Title = "300 Bagels";
+      o2.Price = 400.00;
+      v.Orders.Add(o2);
+      Assert.AreEqual(500.00, v.AverageSpent());
     }
   }
 }
