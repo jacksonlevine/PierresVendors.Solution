@@ -13,18 +13,25 @@ namespace PierresVendors.Tests
       Assert.AreEqual(typeof(Order), o.GetType());
     }
     [TestMethod]
-    public void Order_HasPublicTitleProperty()
+    public void Order_HasPublicTitleProperty_String()
     {
       Order o = new Order();
       o.Title = "Test title";
       Assert.AreEqual("Test title", o.Title);
     }
     [TestMethod]
-    public void Order_HasPublicDescriptionProperty()
+    public void Order_HasPublicDescriptionProperty_String()
     {
       Order o = new Order();
       o.Description = "Test description";
       Assert.AreEqual("Test description", o.Description);
+    }
+    [TestMethod]
+    public void Order_HasPublicPriceProperty_Double()
+    {
+      Order.o = new Order();
+      o.Price = 25.00;
+      Assert.AreEqual(25.00, o.Price);
     }
   }
 }
