@@ -89,5 +89,10 @@ namespace PierresVendors.Tests
       v.Orders.Add(o2);
       Assert.AreEqual(1000.00, v.TotalSpent());
     }
+    [TestMethod]
+    public void AverageSpent_ReturnsAverageAmountSpentWithThisVendor_Double()
+    {
+      
+    }
   }
 }

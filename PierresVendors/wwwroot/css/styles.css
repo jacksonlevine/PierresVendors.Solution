@@ -18,9 +18,13 @@ div#container {
 }
 
 body {
-
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display:flex;
   justify-content: center;
+}
+
+.grey {
+  color:grey;
 }
 
 .vendorOutside,
