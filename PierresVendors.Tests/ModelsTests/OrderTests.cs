@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresVendors.Models;
+using System;
 
 namespace PierresVendors.Tests
 {
@@ -32,6 +33,12 @@ namespace PierresVendors.Tests
       Order o = new Order();
       o.Price = 25.00;
       Assert.AreEqual(25.00, o.Price);
+    }
+    [TestMethod]
+    public void Order_HasPublicDateProperty_DateTime()
+    {
+      Order o = new Order();
+      Assert.AreEqual(typeof(DateTime), o.Date);
     }
   }
 }
