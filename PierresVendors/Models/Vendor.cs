@@ -20,6 +20,10 @@ namespace PierresVendors.Models
     public Vendor()
     {
       _allinstances.Add(this);
+      AssignId();
+    }
+    public void AssignId()
+    {
       Id = _currentId;
       _currentId++;
     }
