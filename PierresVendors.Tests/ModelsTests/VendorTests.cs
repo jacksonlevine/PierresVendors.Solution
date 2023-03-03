@@ -38,5 +38,11 @@ namespace PierresVendors.Tests
     {
       Assert.AreEqual(typeof(List<Vendor>), Vendor.GetAll().GetType());
     }
+    [TestMethod]
+    public void ClearAll_StaticMethodClearsInstanceList_Void()
+    {
+      Vendor.ClearAll();
+      Assert.AreEqual(0, Vendor.GetAll().Count);
+    }
   }
 }
