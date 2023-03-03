@@ -1,6 +1,7 @@
 using PierresVendors.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System;
 
 namespace PierresVendors.Controllers
 {
@@ -41,6 +42,18 @@ namespace PierresVendors.Controllers
     public ActionResult NewOrder(int id)
     {
       return View(id);
+    }
+    [HttpPost("/vendors/{id}/orders")]
+    public ActionResult CreateOrder(int id, string title, string description, string price, string date)
+    {
+      Vendor foundVendor = Vendor.Find(id);
+      Order o = new Order();
+      o.Title = title;
+      o.Description = description;
+      o.Price = double.Parse(price);
+      o.Date = date;
+      foundVendor.Orders.Add(o);
+      return RedirectToAction("ViewOrders",  $"vendors/{foundVendor.Id}", new{ id = foundVendor.Id });
     }
   }
 }
