@@ -16,8 +16,15 @@ namespace PierresVendors.Tests
     public void Vendor_HasPublicNameProperty_String()
     {
       Vendor v = new Vendor();
-      v.Name = "Test";
-      Assert.AreEqual("Test", v.Name);
+      v.Name = "Test name";
+      Assert.AreEqual("Test name", v.Name);
+    }
+    [TestMethod]
+    public void Vendor_HasPublicDescriptionProperty_String()
+    {
+      Vendor v = new Vendor();
+      v.Description = "Test description";
+      Assert.AreEqual("Test description", v.Description);
     }
   }
 }
