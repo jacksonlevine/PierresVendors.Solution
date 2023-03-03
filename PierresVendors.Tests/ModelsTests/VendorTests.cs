@@ -26,5 +26,11 @@ namespace PierresVendors.Tests
       v.Description = "Test description";
       Assert.AreEqual("Test description", v.Description);
     }
+    [TestMethod]
+    public void Vendor_HasPublicListOfOrders_ListOrder()
+    {
+      Vendor v = new Vendor();
+      Assert.AreEqual(typeof(List<Order>), v.Orders.GetType());
+    }
   }
 }
