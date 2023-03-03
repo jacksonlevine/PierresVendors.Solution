@@ -75,5 +75,19 @@ namespace PierresVendors.Tests
       v.Name = "Josh";
       Assert.AreEqual("Josh", Vendor.Find(0).Name);
     }
+    [TestMethod]
+    public void TotalSpent_ReturnsTotalAmountSpentOnThisVendor_Double()
+    {
+      Vendor v = new Vendor();
+      Order o = new Order();
+      o.Title = "200 Bagels";
+      o.Price = 500.00;
+      v.Orders.Add(o);
+      Order o2 = new Order();
+      o.Title = "300 Bagels";
+      o.Price = 500.00;
+      v.Orders.Add(o2);
+      Assert.AreEqual(1000.00, v.TotalSpent());
+    }
   }
 }
