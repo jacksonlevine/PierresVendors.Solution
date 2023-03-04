@@ -3,9 +3,16 @@
 }
 <div class="vendor">
   <h2>More info about this vendor:</h2>
-  <h3>Name: @Model.Name</h3>
-  <h3>Description: @Model.Description</h3>
-  <h3><span class="grey">Id: @Model.Id</span></h3>
+  <div class="leftAlign">
+    <h3>Name: @Model.Name</h3>
+    <h3>Description: @Model.Description</h3>
+    <h3><span class="grey">Id: @Model.Id</span></h3>
+  </div>
+  <h2>Total Spent Here: $@Model.TotalSpent()</h2>
+@if(@Model.Orders.Count > 0)
+{
+  <h2>Average Spent Here: $@Model.AverageSpent()</h2>
+}
   <a href="/vendors/@Model.Id/orders"><h1>View orders</h1></a>
 </div>
 <a href="/vendors">Back to view all vendors</a>
