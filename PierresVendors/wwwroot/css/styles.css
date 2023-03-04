@@ -5,7 +5,6 @@ div#footer {
   width:100%;
   padding:8px;
 }
-
 div#container {
   max-width:40%;
   min-width:40%;
@@ -16,17 +15,14 @@ div#container {
   flex-direction:column;
   align-items: center;
 }
-
 body {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display:flex;
   justify-content: center;
 }
-
 .grey {
   color:grey;
 }
-
 .vendorOutside,
 .vendor {
   display:flex;
@@ -38,7 +34,6 @@ body {
   align-items: center;
   max-width: fit-content;
 }
-
 .vendorOutside {
   border-radius:25px;
   border: 10px solid lightskyblue;
@@ -47,7 +42,6 @@ body {
 .vendorOutside:hover {
   transform: scale(1.1);
 }
-
 .order {
   display:flex;
   flex-direction: column;
@@ -60,4 +54,12 @@ body {
   padding-block-end:0;
   border-radius: 10px;
   transition:all 100ms;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: .2em;
+  margin-bottom: .2em;
 }

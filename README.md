@@ -1,4 +1,6 @@
 # Pierre's Vendors
+![image](./image.jpg)
+
 ## An MVC application to keep track of Pierre's vendors and their respective orders.
 
 ## Technologies Used:
